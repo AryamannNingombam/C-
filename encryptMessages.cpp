@@ -69,6 +69,8 @@ int main(){
         //This is a flaw in the program and using spaces in the sentence cannot lead to a successful decryption; Using '-' or '_' would 
         //decrypt successfully;
         cout << "NOTE : Use '-' or '_' instead of spaces to avoid successful decryptions if you're encrypting." << endl;
+        cout << "Use both '-' and '_' to increase the difficulty of decryption from potential threats ." <<endl;
+        cout << "WARNING :DO NOT use signs like '#!\"\"' as this would cause a decryption problem." << endl;
         cout << "Enter the message to " << ((toEncrypt) ? " encrypt " :  " decrypt ") << " : ";
         cin.ignore();
         getline(cin,inputFromUser);
