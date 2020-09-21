@@ -15,7 +15,7 @@ for( char i : message){
     //to increase 
     //or decrease 
     // the difficulty of decryption;
-    if (counter>10){
+    if (counter>5){
         counter = 1;
         }
     //Incrementing/Decrementing the ASCII value of the char ; Increment if reverse is false  || Decrement if reverse is true;
@@ -39,7 +39,7 @@ string decryptThis(string message){
     for( char i : message){
         
        //Same logic as before
-    if (counter>10){
+    if (counter>5){
         counter = 1;
         }
     decryptedMessage += ((reverse)?char(int(i)-counter):char(int(i)+counter));
