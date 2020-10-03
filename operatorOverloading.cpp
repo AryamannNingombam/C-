@@ -58,14 +58,14 @@ class MyString{
    *this = *this + rhs;
    return *this;
     };
-    MyString &operator*(const int &rhs){
-        string temp{this->mainString};
+    MyString operator*(const int &rhs){
+        MyString temp{this->mainString};
         for (int i{1};i<rhs;i++){
-            *this +=  temp;
+            temp +=  *this;
             
         };
        
-        return *this;
+        return temp;
     };
     MyString &operator *=(const int &rhs){
         (*this) = (*this) * rhs;
@@ -164,6 +164,11 @@ test4 *=4;
 cout << "Test4 -> " << test4 << endl;
 
  cout << "----------------------------------------------------------------" << endl;
+cout << "Misc..." << endl;
+test4 = "Test";
 
+cout << "Test4 -> " << test4 << endl;
+test4+= (test4*3);
+cout << test4 << endl;
     return 0;
 };
